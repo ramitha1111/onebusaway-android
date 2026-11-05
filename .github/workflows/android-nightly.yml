@@ -47,6 +47,7 @@ concurrency:
 jobs:
   all-brands:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: checkout
         uses: actions/checkout@v7
@@ -70,6 +71,7 @@ jobs:
     # No emulator needed: lint is a static analysis task. Independent of the other legs, so it runs
     # in parallel. See the header for why this exists.
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: checkout
         uses: actions/checkout@v7
